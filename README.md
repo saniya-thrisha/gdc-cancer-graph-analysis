@@ -12,7 +12,7 @@ Instead of analyzing data in conventional table formats, this project models it 
 
 ---
 
-## 🚀 Technologies Used
+## Technologies Used
 
 - Python 3
 - Flask
@@ -24,14 +24,14 @@ Instead of analyzing data in conventional table formats, this project models it 
 
 ---
 
-## 🧰 Architecture Diagram
+## Architecture Diagram
 
 > ![Image](https://github.com/user-attachments/assets/39f1781b-c085-4287-bf2e-8f43e9a9a6b1)
 > `![Architecture Diagram](path/to/architecture.png)`
 
 ---
 
-## ✅ Steps and Methodology
+## Steps and Methodology
 
 ### 1. 🔍 Data Cleaning
 
@@ -88,7 +88,7 @@ The interface is built using Flask with two main routes:
 
 ---
 
-## 🖼️ Application Screenshots
+## Application Screenshots
 
 ### Home Page:
 > Filter clinical data and view results in a table
@@ -104,7 +104,7 @@ The interface is built using Flask with two main routes:
 
 ---
 
-## 📙 Reference
+## Reference
 
 - GDC Cancer Portal: [https://portal.gdc.cancer.gov/](https://portal.gdc.cancer.gov/)
 
