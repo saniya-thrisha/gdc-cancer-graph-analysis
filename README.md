@@ -98,7 +98,9 @@ The interface is built using Flask with two main routes:
 ### Analysis Page:
 > Shows insights on filtered data
 
-`![Analysis Page](path/to/analysis_screenshot.png)`
+![Image](https://github.com/user-attachments/assets/c32336a7-e933-4ada-83c6-14ffadbd5fe4)
+
+![Image](https://github.com/user-attachments/assets/81b5c0b1-1e2a-4764-aa37-7962be8d5a56)
 
 ---
 
