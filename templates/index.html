@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+    <title>GDC DataLens</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .button-group-wrapper {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button-group-wrapper form {
+            margin: 0;
+        }
+        .filter-table, table {
+            border-collapse: collapse;
+            margin-top: 20px;
+            width: 100%;
+        }
+        .filter-table th, .filter-table td,
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        .filter-table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Filter Clinical Data</h2>
+    <form method="post">
+        Diagnosis:
+        <select name="diagnosis">
+            <option value="All">All</option>
+            {% for val in diagnoses %}
+                <option value="{{ val }}" {% if val == filters.diagnosis %}selected{% endif %}>{{ val }}</option>
+            {% endfor %}
+        </select>
+
+        Status:
+        <select name="status">
+            <option value="All">All</option>
+            {% for val in statuses %}
+                <option value="{{ val }}" {% if val == filters.status %}selected{% endif %}>{{ val }}</option>
+            {% endfor %}
+        </select>
+
+        Gender:
+        <select name="gender">
+            <option value="All">All</option>
+            {% for val in genders %}
+                <option value="{{ val }}" {% if val == filters.gender %}selected{% endif %}>{{ val }}</option>
+            {% endfor %}
+        </select>
+
+        Treatment Type:
+        <select name="treatment">
+            <option value="All">All</option>
+            {% for val in treatments %}
+                <option value="{{ val }}" {% if val == filters.treatment %}selected{% endif %}>{{ val }}</option>
+            {% endfor %}
+        </select>
+
+        <!-- Wrap both buttons in a flex container -->
+        <div class="button-group-wrapper">
+            <form method="post">
+                <button type="submit" value="Search">Search</button>
+            </form>
+
+            {% if result %}
+            <form action="/analysis" method="get">
+                <button type="submit" value="Analysis">Analysis</button>
+            </form>
+            {% endif %}
+        </div>
+    </form>
+
+      
+  {% if applied_filters %}
+  <h3>Applied Filters</h3>
+  <table>
+      <tr>
+          <th>Filter</th>
+          <th>Value</th>
+      </tr>
+      {% for key, val in applied_filters.items() %}
+      <tr>
+          <td>{{ key }}</td>
+          <td>{{ val }}</td>
+      </tr>
+      {% endfor %}
+  </table>
+{% endif %}
+
+{% if result %}
+  <h3>Results</h3>
+  {% if result %}
+      <table>
+          <tr>
+              {% for key in result[0].keys() %}
+                  <th>{{ key }}</th>
+              {% endfor %}
+          </tr>
+          {% for row in result %}
+              <tr>
+                  {% for val in row.values() %}
+                      <td>{{ val }}</td>
+                  {% endfor %}
+              </tr>
+          {% endfor %}
+      </table>
+  {% else %}
+      <p>No matching results found.</p>
+  {% endif %}
+{% endif %}
+</body>
+</html>

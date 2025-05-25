@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GDC DataLens</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f8f8;
+            padding: 30px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .chart {
+            margin-bottom: 40px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/">← Back to Filters</a>
+    <h1>Clinical Data Analysis</h1>
+
+    <div class="chart">
+        <h2>Bar Chart: Treatment Type by Gender</h2>
+        {{ bar_html | safe }}
+    </div>
+
+    <div class="chart">
+        <h2>Pie Chart: Vital Status Distribution</h2>
+        {{ pie_html | safe }}
+    </div>
+
+  
+</body>
+</html>
