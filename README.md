@@ -26,7 +26,7 @@ Instead of analyzing data in conventional table formats, this project models it 
 
 ## 🧰 Architecture Diagram
 
-> *(Insert your architecture diagram image here using:)*
+> ![Image](https://github.com/user-attachments/assets/39f1781b-c085-4287-bf2e-8f43e9a9a6b1)
 > `![Architecture Diagram](path/to/architecture.png)`
 
 ---
