@@ -1,4 +1,4 @@
-# 🧪 GDC Cancer Data Analysis using Neo4j and Flask
+# GDC Cancer Data Analysis using Neo4j and Flask
 
 This project focuses on analyzing cancer-related clinical data from the **National Cancer Institute's Genomic Data Commons (GDC)** using a graph-based approach. By leveraging **Neo4j** and **Flask**, this project transforms traditionally tabular datasets into graph structures to uncover deeper, more meaningful insights that are difficult to extract from relational databases.
 
