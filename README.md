@@ -104,8 +104,5 @@ The interface is built using Flask with two main routes:
 
 ---
 
-## Reference
-
-- GDC Cancer Portal: [https://portal.gdc.cancer.gov/](https://portal.gdc.cancer.gov/)
 
 ---
