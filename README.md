@@ -93,7 +93,7 @@ The interface is built using Flask with two main routes:
 ### Home Page:
 > Filter clinical data and view results in a table
 
-`![Home Page](path/to/homepage_screenshot.png)`
+![Image](https://github.com/user-attachments/assets/5320e4a3-c251-4886-803c-307ed82b12d2)
 
 ### Analysis Page:
 > Shows insights on filtered data
